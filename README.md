@@ -1,2 +1,2 @@
 # rozetka
-Unoficial API client for rozetka.ua
+Unofficial REST API client for rozetka.ua
