@@ -10,6 +10,8 @@ export const rozetka = got.extend({
     beforeRequest: [logRequest, updateSearchParams],
     afterResponse: [logResponse]
   },
+  resolveBodyOnly: true,
+  responseType: 'json',
   // only `lang` parameter is needed, the rest is just to simulate the frontend
   searchParams: new URLSearchParams([
     ['front-type', 'xl'],
