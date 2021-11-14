@@ -28,3 +28,6 @@ export const catalog = rozetka.extend({
     ['goods_group_href', '1']
   ])
 })
+
+export const details = (ids: string) =>
+  catalog.get('v4/goods/getDetails', { searchParams: new URLSearchParams([['product_ids', ids]]) })
