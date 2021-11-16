@@ -15,6 +15,13 @@ export const description = (productId: number) => {
   return product.get('v4/goods/get-goods-description', params)
 }
 
+export const characteristics = (productId: number) => {
+  const params: Params = {
+    searchParams: new URLSearchParams([['goodsId', productId.toString()]])
+  }
+  return product.get('v4/goods/get-characteristic', params)
+}
+
 export const relatedProducts = (productId: number) => {
   const params: Params = {
     searchParams: new URLSearchParams([['goodsId', productId.toString()]])
