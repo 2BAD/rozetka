@@ -32,3 +32,7 @@ export const catalog = rozetka.extend({
 export const common = rozetka.extend({
   prefixUrl: 'https://common-api.rozetka.com.ua/'
 })
+
+export const product = rozetka.extend({
+  prefixUrl: 'https://product-api.rozetka.com.ua/'
+})
