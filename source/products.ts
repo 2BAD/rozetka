@@ -22,6 +22,20 @@ export const characteristics = (productId: number) => {
   return product.get('v4/goods/get-characteristic', params)
 }
 
+export const promotions = (productId: number) => {
+  const params: Params = {
+    searchParams: new URLSearchParams([['goodsId', productId.toString()]])
+  }
+  return product.get('v4/marketing/get-promotions', params)
+}
+
+export const offers = (productId: number) => {
+  const params: Params = {
+    searchParams: new URLSearchParams([['goodsId', productId.toString()]])
+  }
+  return product.get('v4/marketing/get-super-offer', params)
+}
+
 export const relatedProducts = (productId: number) => {
   const params: Params = {
     searchParams: new URLSearchParams([['goodsId', productId.toString()]])
