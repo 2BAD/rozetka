@@ -1,6 +1,6 @@
 import got from 'got'
-import { logRequest, logResponse } from './hooks/debug.js'
-import { updateSearchParams } from './hooks/searchParams.js'
+import { logRequest, logResponse } from './hooks/debug'
+import { updateSearchParams } from './hooks/searchParams'
 
 export const rozetka = got.extend({
   headers: {
@@ -29,5 +29,6 @@ export const catalog = rozetka.extend({
   ])
 })
 
-export const details = (ids: string) =>
-  catalog.get('v4/goods/getDetails', { searchParams: new URLSearchParams([['product_ids', ids]]) })
+export const common = rozetka.extend({
+  prefixUrl: 'https://common-api.rozetka.com.ua/'
+})
