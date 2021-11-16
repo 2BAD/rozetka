@@ -1,5 +1,5 @@
 import type { OptionsOfTextResponseBody as Params } from 'got'
-import { catalog, common } from './client/index'
+import { catalog, common, product } from './client/index'
 
 export const details = (id: number | number[]) => {
   const params: Params = {
@@ -15,4 +15,11 @@ export const price = (id: number | number[]) => {
   }
   // trailing slash is necessary here
   return common.get('v2/goods/get-price/', params)
+}
+
+export const description = (id: number) => {
+  const params: Params = {
+    searchParams: new URLSearchParams([['goodsId', id.toString()]])
+  }
+  return product.get('v4/goods/get-goods-description', params)
 }
