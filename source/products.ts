@@ -3,7 +3,12 @@ import { catalog, common, product } from './client/index'
 
 export const details = (productId: number | number[]) => {
   const params: Params = {
-    searchParams: new URLSearchParams([['product_ids', productId.toString()]])
+    searchParams: new URLSearchParams([
+      ['with_groups', '1'],
+      ['with_docket', '1'],
+      ['goods_group_href', '1'],
+      ['product_ids', productId.toString()]
+    ])
   }
   return catalog.get('v4/goods/getDetails', params)
 }

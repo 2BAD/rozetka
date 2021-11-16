@@ -21,12 +21,7 @@ export const rozetka = got.extend({
 })
 
 export const catalog = rozetka.extend({
-  prefixUrl: 'https://xl-catalog-api.rozetka.com.ua/',
-  searchParams: new URLSearchParams([
-    ['with_groups', '1'],
-    ['with_docket', '1'],
-    ['goods_group_href', '1']
-  ])
+  prefixUrl: 'https://xl-catalog-api.rozetka.com.ua/'
 })
 
 export const common = rozetka.extend({
