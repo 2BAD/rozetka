@@ -1,0 +1,98 @@
+{
+  "name": "@2bad/rozetka",
+  "version": "1.0.0",
+  "description": "Unofficial REST API client for rozetka.ua",
+  "keywords": [],
+  "homepage": "https://github.com/2BAD/rozetka#readme",
+  "bugs": {
+    "url": "https://github.com/2BAD/rozetka/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2BAD/rozetka.git"
+  },
+  "license": "MIT",
+  "author": "2BAD (https://github.com/2BAD)",
+  "contributors": [
+    {
+      "name": "Jason Hyde",
+      "email": "github@2bad.me",
+      "url": "https://github.com/mrhyde"
+    }
+  ],
+  "type": "module",
+  "exports": "./build/index.js",
+  "typings": "./build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "clean": "rimraf build",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "run-s \"lint -- --fix\"",
+    "prepublishOnly": "run-s clean build",
+    "test": "jest --coverage",
+    "test:integration": "jest integration --coverage",
+    "test:integration:watch": "jest integration --watch",
+    "test:unit": "jest unit --coverage",
+    "test:unit:watch": "jest unit --watch",
+    "test:watch": "jest --watch",
+    "preversion": "run-s clean lint test build"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "source/**/*.ts"
+    ],
+    "coverageDirectory": "coverage",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/build/"
+    ],
+    "preset": "ts-jest",
+    "setupFiles": [
+      "dotenv/config"
+    ],
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ]
+  },
+  "dependencies": {
+    "got": "12.0.0-beta.4",
+    "roarr": "7.7.0",
+    "serialize-error": "8.1.0"
+  },
+  "devDependencies": {
+    "@2bad/tsconfig": "1.3.0",
+    "@types/jest": "27.0.2",
+    "@types/node": "16.11.7",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
+    "codecov": "3.8.3",
+    "dotenv": "10.0.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-config-standard-with-typescript": "21.0.1",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jest": "25.2.4",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-promise": "5.1.1",
+    "jest": "27.3.1",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.4.1",
+    "rimraf": "3.0.2",
+    "ts-jest": "27.0.7",
+    "ts-node": "10.4.0",
+    "typescript": "4.4.4"
+  },
+  "volta": {
+    "node": "17.0.1"
+  }
+}
