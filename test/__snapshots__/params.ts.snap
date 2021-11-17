@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Parameter builder for Got client should accept array of arrays 1`] = `
+Object {
+  "searchParams": URLSearchParams {
+    Symbol(query): Array [
+      "goodsId",
+      "100",
+      "lang",
+      "ru",
+    ],
+    Symbol(context): null,
+  },
+}
+`;
+
+exports[`Parameter builder for Got client should return Options object with searchParam set to URLSearchParams object instance 1`] = `
+Object {
+  "searchParams": URLSearchParams {
+    Symbol(query): Array [
+      "goodsId",
+      "100",
+    ],
+    Symbol(context): null,
+  },
+}
+`;
