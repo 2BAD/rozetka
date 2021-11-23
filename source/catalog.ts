@@ -1,6 +1,6 @@
 import { catalog, common } from './client/index'
 import { buildParams } from './client/utils/params'
-import { Details } from './types/catalog'
+import { Details, Ids } from './types/catalog'
 
 export const categories = () => common.get('v2/fat-menu/full')
 
@@ -10,8 +10,7 @@ export const details = (categoryId: number): Promise<Details> =>
     .then((r) => Details.parse(r))
 
 // @todo should paginate automatically
-export const ids = (categoryId: number) =>
-  catalog.get(
-    'v4/goods/get',
-    buildParams([['category_id', categoryId.toString()]])
-  )
+export const ids = (categoryId: number): Promise<Ids> =>
+  catalog
+    .get('v4/goods/get', buildParams([['category_id', categoryId.toString()]]))
+    .then((r) => Ids.parse(r))
