@@ -2,6 +2,7 @@ import { catalog, common, product } from './client/index'
 import { buildParams } from './client/utils/params'
 import { Characteristics } from './types/product/Characteristics'
 import { Description } from './types/product/Description'
+import { Offer } from './types/product/Offer'
 import { Promotion } from './types/product/Promotion'
 import { RelatedProducts } from './types/product/RelatedProducts'
 
@@ -41,8 +42,10 @@ export const promotion = (productId: number): Promise<Promotion> =>
     .get('v4/marketing/get-promotions', genericParams(productId))
     .then((r) => Promotion.parse(r))
 
-export const offers = (productId: number) =>
-  product.get('v4/marketing/get-super-offer', genericParams(productId))
+export const offers = (productId: number): Promise<Offer> =>
+  product
+    .get('v4/marketing/get-super-offer', genericParams(productId))
+    .then((r) => Offer.parse(r))
 
 export const relatedProducts = (productId: number): Promise<RelatedProducts> =>
   product
