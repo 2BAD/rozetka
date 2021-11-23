@@ -1,6 +1,6 @@
 import { catalog, common, product } from './client/index'
 import { buildParams } from './client/utils/params'
-import { Characteristics, Description } from './types/product'
+import { Characteristics, Description, RelatedProducts } from './types/product'
 
 /**
  * Create a common set of parameters for most of the api calls
@@ -38,8 +38,10 @@ export const promotions = (productId: number) =>
 export const offers = (productId: number) =>
   product.get('v4/marketing/get-super-offer', genericParams(productId))
 
-export const relatedProducts = (productId: number) =>
-  product.get('v4/goods/get-related', genericParams(productId))
+export const relatedProducts = (productId: number): Promise<RelatedProducts> =>
+  product
+    .get('v4/goods/get-related', genericParams(productId))
+    .then((r) => RelatedProducts.parse(r))
 
 export const price = (productId: number | number[]) => {
   const paramName = Array.isArray(productId) ? 'ids' : 'id'
@@ -48,12 +50,4 @@ export const price = (productId: number | number[]) => {
     'v2/goods/get-price/',
     buildParams([[paramName, productId.toString()]])
   )
-}
-
-try {
-  let c = await characteristics(6802844)
-
-  console.log(c)
-} catch (error) {
-  console.log(error)
 }
