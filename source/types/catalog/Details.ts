@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { Category } from './Category'
 
-const TileConfig = z.object({
+export const TileConfig = z.object({
   template: z.string(),
   possible_templates: z.array(z.string()),
   template_view: z.string()

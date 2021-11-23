@@ -15,6 +15,7 @@ export const Category = z.object({
   titles_mode: z.string(),
   rz_mpath: z.string(),
   title: z.string(),
-  root_id: z.number()
+  root_id: z.number().nullish(),
+  count: z.number().nullish()
 })
 export type Category = z.infer<typeof Category>

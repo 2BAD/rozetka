@@ -1,9 +1,18 @@
 import { catalog, common } from './client/index'
 import { buildParams } from './client/utils/params'
+import { Children } from './types/catalog/Children'
 import { Details } from './types/catalog/Details'
 import { Ids } from './types/catalog/Ids'
 
 export const categories = () => common.get('v2/fat-menu/full')
+
+export const children = (categoryId: number): Promise<Children> =>
+  catalog
+    .get(
+      'v4/categories/getChildren',
+      buildParams([['category_id', categoryId.toString()]])
+    )
+    .then((r) => Children.parse(r))
 
 export const details = (categoryId: number): Promise<Details> =>
   catalog
