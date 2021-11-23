@@ -2,6 +2,7 @@ import { catalog, common, product } from './client/index'
 import { buildParams } from './client/utils/params'
 import { Characteristics } from './types/product/Characteristics'
 import { Description } from './types/product/Description'
+import { Details } from './types/product/Details'
 import { Offer } from './types/product/Offer'
 import { Promotion } from './types/product/Promotion'
 import { RelatedProducts } from './types/product/RelatedProducts'
@@ -12,16 +13,18 @@ import { Tags } from './types/product/Tags'
  */
 const genericParams = (id: number) => buildParams([['goodsId', id.toString()]])
 
-export const details = (productId: number | number[]) =>
-  catalog.get(
-    'v4/goods/getDetails',
-    buildParams([
-      ['with_groups', '1'],
-      ['with_docket', '1'],
-      ['goods_group_href', '1'],
-      ['product_ids', productId.toString()]
-    ])
-  )
+export const details = (productId: number | number[]): Promise<Details> =>
+  catalog
+    .get(
+      'v4/goods/getDetails',
+      buildParams([
+        ['with_groups', '1'],
+        ['with_docket', '1'],
+        ['goods_group_href', '1'],
+        ['product_ids', productId.toString()]
+      ])
+    )
+    .then((r) => Details.parse(r))
 
 export const description = (productId: number): Promise<Description> =>
   product
