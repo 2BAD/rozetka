@@ -1,6 +1,7 @@
 import { catalog, common } from './client/index'
 import { buildParams } from './client/utils/params'
-import { Details, Ids } from './types/catalog'
+import { Details } from './types/catalog/Details'
+import { Ids } from './types/catalog/Ids'
 
 export const categories = () => common.get('v2/fat-menu/full')
 

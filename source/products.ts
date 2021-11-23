@@ -1,11 +1,9 @@
 import { catalog, common, product } from './client/index'
 import { buildParams } from './client/utils/params'
-import {
-  Characteristics,
-  Description,
-  Promotion,
-  RelatedProducts
-} from './types/product'
+import { Characteristics } from './types/product/Characteristics'
+import { Description } from './types/product/Description'
+import { Promotion } from './types/product/Promotion'
+import { RelatedProducts } from './types/product/RelatedProducts'
 
 /**
  * Create a common set of parameters for most of the api calls
