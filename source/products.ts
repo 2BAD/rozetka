@@ -1,5 +1,6 @@
-import { buildParams } from './client/utils/params'
 import { catalog, common, product } from './client/index'
+import { buildParams } from './client/utils/params'
+import { Characteristics, Description } from './types/product'
 
 /**
  * Create a common set of parameters for most of the api calls
@@ -17,11 +18,16 @@ export const details = (productId: number | number[]) =>
     ])
   )
 
-export const description = (productId: number) =>
-  product.get('v4/goods/get-goods-description', genericParams(productId))
+export const description = (productId: number): Promise<Description> =>
+  product
+    .get('v4/goods/get-goods-description', genericParams(productId))
+    .then((r) => Description.parse(r))
 
-export const characteristics = (productId: number) =>
-  product.get('v4/goods/get-characteristic', genericParams(productId))
+//@todo check if there can by more than one element in response array
+export const characteristics = (productId: number): Promise<Characteristics> =>
+  product
+    .get('v4/goods/get-characteristic', genericParams(productId))
+    .then((r) => Characteristics.parse(r))
 
 export const tags = (productId: number) =>
   product.get('v4/marketing/get-tags', genericParams(productId))
@@ -42,4 +48,12 @@ export const price = (productId: number | number[]) => {
     'v2/goods/get-price/',
     buildParams([[paramName, productId.toString()]])
   )
+}
+
+try {
+  let c = await characteristics(6802844)
+
+  console.log(c)
+} catch (error) {
+  console.log(error)
 }
