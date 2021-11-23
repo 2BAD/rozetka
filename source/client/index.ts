@@ -1,5 +1,6 @@
 import got from 'got'
 import { logRequest, logResponse } from './hooks/debug'
+import { unwrapResponse } from './hooks/response'
 import { updateSearchParams } from './hooks/searchParams'
 
 export const rozetka = got.extend({
@@ -8,7 +9,8 @@ export const rozetka = got.extend({
   },
   hooks: {
     beforeRequest: [logRequest, updateSearchParams],
-    afterResponse: [logResponse]
+    //@todo should handle response payload from common api separately since it doesn't follow the convention
+    afterResponse: [logResponse, unwrapResponse]
   },
   resolveBodyOnly: true,
   responseType: 'json',
