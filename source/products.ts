@@ -1,6 +1,11 @@
 import { catalog, common, product } from './client/index'
 import { buildParams } from './client/utils/params'
-import { Characteristics, Description, RelatedProducts } from './types/product'
+import {
+  Characteristics,
+  Description,
+  Promotion,
+  RelatedProducts
+} from './types/product'
 
 /**
  * Create a common set of parameters for most of the api calls
@@ -32,8 +37,11 @@ export const characteristics = (productId: number): Promise<Characteristics> =>
 export const tags = (productId: number) =>
   product.get('v4/marketing/get-tags', genericParams(productId))
 
-export const promotions = (productId: number) =>
-  product.get('v4/marketing/get-promotions', genericParams(productId))
+//@todo gracefully handle the exception when there is no promotions (data is null)
+export const promotion = (productId: number): Promise<Promotion> =>
+  product
+    .get('v4/marketing/get-promotions', genericParams(productId))
+    .then((r) => Promotion.parse(r))
 
 export const offers = (productId: number) =>
   product.get('v4/marketing/get-super-offer', genericParams(productId))
