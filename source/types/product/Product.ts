@@ -5,6 +5,7 @@ const Group = z.object({
   is_group_primary: z.number(),
   href: z.string().nullable()
 })
+
 const Category = z.object({
   id: z.number(),
   title: z.string(),
@@ -12,16 +13,19 @@ const Category = z.object({
   use_group_links: z.boolean(),
   root_id: z.number()
 })
+
 const Brand = z.object({
   id: z.number(),
   title: z.string(),
   name: z.string(),
   logo: z.string().nullable()
 })
+
 const Comments = z.object({
   amount: z.number(),
   mark: z.number()
 })
+
 const Image = z.object({
   big_tile: z.string(),
   original: z.string(),
@@ -31,16 +35,19 @@ const Loyalty = z.object({
   pl_bonus_charge_pcs: z.number(),
   pl_use_instant_bonus: z.number()
 })
+
 const Price = z.object({
   old: z.number(),
   current: z.number(),
   pcs: z.string()
 })
+
 const Tag = z.object({
   name: z.string(),
   title: z.string(),
   priority: z.number()
 })
+
 export const Product = z.object({
   id: z.number(),
   mpath: z.string(),
