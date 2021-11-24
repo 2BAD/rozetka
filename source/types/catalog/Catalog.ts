@@ -4,8 +4,8 @@ const Leaf = z.object({
   id: z.number(),
   title: z.string(),
   manual_url: z.string(),
-  category_id: z.number(),
-  top_category_id: z.number(),
+  category_id: z.number().nullable(),
+  top_category_id: z.number().nullable(),
   on_subdomain: z.number(),
   is_portal: z.boolean(),
   outer_link: z.boolean()
@@ -17,8 +17,8 @@ const Child = z.object({
   parent_id: z.number(),
   column_number: z.string(),
   manual_url: z.string(),
-  category_id: z.number(),
-  top_category_id: z.number(),
+  category_id: z.number().nullable(),
+  top_category_id: z.number().nullable(),
   on_subdomain: z.number(),
   is_portal: z.boolean(),
   children: z.array(Leaf)
@@ -56,16 +56,16 @@ const Category = z.object({
   border: z.number(),
   logos: z.array(Logo),
   icon_src: z.string().nullable(),
-  category_id: z.number(),
-  top_category_id: z.number(),
+  category_id: z.number().nullable(),
+  top_category_id: z.number().nullable(),
   target_blank: z.number(),
   banner_mobile_src: z.string(),
   on_subdomain: z.number(),
   is_portal: z.boolean(),
   banner_href: z.string(),
-  banner_src: z.string(),
-  children: Children,
-  popular_categories: z.array(SubCategory),
+  banner_src: z.string().nullable(),
+  children: Children.nullish(),
+  popular_categories: z.array(SubCategory).nullish(),
   outer_link: z.boolean()
 })
 
