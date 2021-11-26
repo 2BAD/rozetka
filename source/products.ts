@@ -4,6 +4,7 @@ import { Characteristics } from './types/product/Characteristics'
 import { Description } from './types/product/Description'
 import { Details } from './types/product/Details'
 import { Offer } from './types/product/Offer'
+import { Price, Prices } from './types/product/Price'
 import { Promotion } from './types/product/Promotion'
 import { RelatedProducts } from './types/product/RelatedProducts'
 import { Tags } from './types/product/Tags'
@@ -58,11 +59,9 @@ export const relatedProducts = (productId: number): Promise<RelatedProducts> =>
     .get('v4/goods/get-related', genericParams(productId))
     .then((r) => RelatedProducts.parse(r))
 
-export const price = (productId: number | number[]) => {
-  const paramName = Array.isArray(productId) ? 'ids' : 'id'
+export const price = (productId: number[]): Promise<Price[]> => {
   // trailing slash is necessary here
-  return common.get(
-    'v2/goods/get-price/',
-    buildParams([[paramName, productId.toString()]])
-  )
+  return common
+    .get('v2/goods/get-price/', buildParams([['ids', productId.toString()]]))
+    .then((r) => Prices.parse(r))
 }

@@ -20,3 +20,6 @@ export const Price = z.object({
   info: z.unknown().nullable()
 })
 export type Price = z.infer<typeof Price>
+
+export const Prices = z.array(Price)
+export type Prices = z.infer<typeof Prices>
