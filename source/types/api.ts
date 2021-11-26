@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { Prices } from './product/Price'
 
 export const Response = z
   .object({
@@ -8,3 +9,5 @@ export const Response = z
   .refine((v) => v.data !== null, {
     message: `Response data property is null`
   })
+
+export const PriceResponse = Prices

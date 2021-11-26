@@ -6,8 +6,13 @@ import * as Api from '../../types/api'
  */
 export const unwrapResponse = (response: Response): Response => {
   if (response.statusCode === 200) {
-    const result = Api.Response.parse(response.body)
-    response.body = result.data
+    // get-price endpoint doesn't have common wrapper so should be handled separately
+    if (response.url.includes('v2/goods/get-price/')) {
+      response.body = Api.PriceResponse.parse(response.body)
+    } else {
+      const result = Api.Response.parse(response.body)
+      response.body = result.data
+    }
   }
 
   return response
