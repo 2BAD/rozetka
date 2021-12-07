@@ -7,6 +7,6 @@ import type { Options } from 'got'
  */
 export const updateSearchParams = (options: Options): void => {
   if (options.url instanceof URL) {
-    options.url.searchParams.append('r', Math.random().toString())
+    options.url.searchParams.set('r', Math.random().toString())
   }
 }
