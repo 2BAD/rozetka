@@ -41,6 +41,7 @@
     "preversion": "run-s clean lint test build"
   },
   "prettier": {
+    "printWidth": 120,
     "semi": false,
     "singleQuote": true,
     "trailingComma": "none"
