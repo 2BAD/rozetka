@@ -9,7 +9,7 @@ export const rozetka = got.extend({
   },
   hooks: {
     beforeRequest: [logRequest, updateSearchParams],
-    //@todo should handle response payload from common api separately since it doesn't follow the convention
+    // @todo should handle response payload from common api separately since it doesn't follow the convention
     afterResponse: [logResponse, unwrapResponse]
   },
   resolveBodyOnly: true,
