@@ -51,11 +51,16 @@
       "source/**/*.ts?(x)"
     ],
     "coverageDirectory": "coverage",
+    "globals": {
+      "ts-jest": {
+        "useESM": true
+      }
+    },
     "modulePathIgnorePatterns": [
       "<rootDir>/build/",
       "<rootDir>/source/types/"
     ],
-    "preset": "ts-jest",
+    "preset": "ts-jest/presets/default-esm",
     "setupFiles": [
       "dotenv/config"
     ],
