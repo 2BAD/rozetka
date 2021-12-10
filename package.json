@@ -48,19 +48,19 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "source/**/*.ts"
+      "source/**/*.ts?(x)"
     ],
     "coverageDirectory": "coverage",
     "modulePathIgnorePatterns": [
-      "<rootDir>/build/"
+      "<rootDir>/build/",
+      "<rootDir>/source/types/"
     ],
     "preset": "ts-jest",
     "setupFiles": [
       "dotenv/config"
     ],
-    "testEnvironment": "node",
     "testMatch": [
-      "test/*.[jt]s?(x)"
+      "<rootDir>/test/**/*.ts?(x)"
     ]
   },
   "dependencies": {
