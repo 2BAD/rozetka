@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Parameter builder for Got client should accept array of arrays 1`] = `
+exports[`parameter builder should accept an array of arrays 1`] = `
 Object {
   "searchParams": URLSearchParams {
     Symbol(query): Array [
@@ -14,7 +14,7 @@ Object {
 }
 `;
 
-exports[`Parameter builder for Got client should return Options object with searchParam set to URLSearchParams object instance 1`] = `
+exports[`parameter builder should return Options object with searchParam set to URLSearchParams object instance 1`] = `
 Object {
   "searchParams": URLSearchParams {
     Symbol(query): Array [

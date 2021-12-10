@@ -1,6 +1,6 @@
 import { buildParams } from '../source/client/utils/params'
 
-describe('Parameter builder for Got client', () => {
+describe('parameter builder', () => {
   it('should return Options object with searchParam set to URLSearchParams object instance', () => {
     expect.assertions(3)
 
@@ -11,7 +11,7 @@ describe('Parameter builder for Got client', () => {
     expect(params).toMatchSnapshot()
   })
 
-  it('should accept array of arrays', () => {
+  it('should accept an array of arrays', () => {
     expect.assertions(2)
 
     const params = buildParams([
