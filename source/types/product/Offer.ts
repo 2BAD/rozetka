@@ -11,4 +11,5 @@ export const Offer = z.object({
   block: Block,
   products: z.array(Product)
 })
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Offer = z.infer<typeof Offer>

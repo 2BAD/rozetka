@@ -19,4 +19,5 @@ export const Ids = z.object({
   shown_page: z.number(),
   alternate: z.array(AlternateDomain)
 })
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Ids = z.infer<typeof Ids>

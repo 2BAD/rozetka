@@ -18,4 +18,5 @@ export const Category = z.object({
   root_id: z.number().nullish(),
   count: z.number().nullish()
 })
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Category = z.infer<typeof Category>

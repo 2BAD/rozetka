@@ -70,4 +70,5 @@ const Category = z.object({
 })
 
 export const Catalog = z.record(Category)
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Catalog = z.infer<typeof Catalog>

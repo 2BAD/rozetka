@@ -19,7 +19,9 @@ export const Price = z.object({
   has_shops: z.boolean(),
   info: z.unknown().nullable()
 })
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Price = z.infer<typeof Price>
 
 export const Prices = z.array(Price)
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Prices = z.infer<typeof Prices>

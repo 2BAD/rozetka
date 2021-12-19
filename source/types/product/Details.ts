@@ -142,9 +142,9 @@ const Detail = z.object({
   gift: Gift.nullable(),
   tag: Tag.nullable(),
   pictograms: z.array(Pictogram).nullable(),
-  //@todo requires verification
+  // @todo requires verification
   title_mode: z.unknown().nullable(),
-  //@todo requires verification
+  // @todo requires verification
   use_group_links: z.unknown().nullable(),
   is_need_street_id: z.boolean(),
   image_main: z.string(),
@@ -159,4 +159,5 @@ const Detail = z.object({
 })
 
 export const Details = z.array(Detail)
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Details = z.infer<typeof Details>

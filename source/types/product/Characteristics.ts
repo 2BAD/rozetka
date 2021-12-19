@@ -26,4 +26,5 @@ export const Characteristics = z.array(
     options: z.array(Option)
   })
 )
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Characteristics = z.infer<typeof Characteristics>

@@ -25,4 +25,5 @@ export const Children = z.object({
   tile_config: TileConfig,
   is_need_street_id: z.boolean()
 })
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Children = z.infer<typeof Children>

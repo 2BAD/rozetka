@@ -6,4 +6,5 @@ export const Description = z.object({
   isRichNoLimit: z.boolean(),
   rich: z.string().nullable()
 })
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Description = z.infer<typeof Description>

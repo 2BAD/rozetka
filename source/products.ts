@@ -41,9 +41,7 @@ export const characteristics = (productId: number): Promise<Characteristics> =>
     .then((r) => Characteristics.parse(r))
 
 export const tags = (productId: number): Promise<Tags> =>
-  product
-    .get('v4/marketing/get-tags', genericParams(productId))
-    .then((r) => Tags.parse(r))
+  product.get('v4/marketing/get-tags', genericParams(productId)).then((r) => Tags.parse(r))
 
 // @todo gracefully handle the exception when there is no promotions (data is null)
 export const promotion = (productId: number): Promise<Promotion> =>
@@ -52,9 +50,7 @@ export const promotion = (productId: number): Promise<Promotion> =>
     .then((r) => Promotion.parse(r))
 
 export const offers = (productId: number): Promise<Offer> =>
-  product
-    .get('v4/marketing/get-super-offer', genericParams(productId))
-    .then((r) => Offer.parse(r))
+  product.get('v4/marketing/get-super-offer', genericParams(productId)).then((r) => Offer.parse(r))
 
 export const relatedProducts = (productId: number): Promise<RelatedProducts> =>
   product

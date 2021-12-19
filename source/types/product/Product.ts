@@ -71,4 +71,5 @@ export const Product = z.object({
   premium_program: z.boolean(),
   sla_id: z.number()
 })
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Product = z.infer<typeof Product>

@@ -17,4 +17,5 @@ export const Details = z.object({
   is_need_street_id: z.boolean(),
   is_shop_category: z.boolean()
 })
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Details = z.infer<typeof Details>

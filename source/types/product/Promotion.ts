@@ -5,12 +5,13 @@ export const Promotion = z.object({
   constructor_id: z.number(),
   url: z.string(),
   title: z.string(),
-  //@todo replace with proper date and time validation
+  // @todo replace with proper date and time validation
   period_start: z.string(),
   period_end: z.string(),
   hide_date: z.boolean(),
   icon: z.string(),
-  //@todo requires verification
+  // @todo requires verification
   announce: z.string().nullable()
 })
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Promotion = z.infer<typeof Promotion>

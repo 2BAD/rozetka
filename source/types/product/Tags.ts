@@ -11,9 +11,10 @@ const Tag = z.object({
   has_description: z.number(),
   icon: z.string(),
   icon_mobile: z.string(),
-  //@todo requires verification
+  // @todo requires verification
   announce: z.string().nullable()
 })
 
 export const Tags = z.array(Tag)
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Tags = z.infer<typeof Tags>
