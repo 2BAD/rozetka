@@ -16,7 +16,7 @@ export const Category = z.object({
   rz_mpath: z.string(),
   title: z.string(),
   root_id: z.number().nullish(),
-  count: z.number().nullish()
+  count: z.union([z.string(), z.number()]).nullish()
 })
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Category = z.infer<typeof Category>
