@@ -11,7 +11,7 @@ const Leaf = z
     is_portal: z.boolean(),
     outer_link: z.boolean()
   })
-  // extract category_id from manual_url property since backend returns random values
+  // extract category_id from manual_url property since it contains unreliable data
   .transform((c) => {
     const exp = /\/c(\d+)\//
     const match = exp.exec(c.manual_url)
@@ -21,6 +21,8 @@ const Leaf = z
       category_id: extractedId ?? c.category_id
     }
   })
+  // replace top_category_id with placeholder since it contains unreliable data
+  .transform((c) => ({ ...c, top_category_id: 'NOT_RELIABLE_SEE_README' }))
 
 const Child = z
   .object({
@@ -35,7 +37,7 @@ const Child = z
     is_portal: z.boolean(),
     children: z.array(Leaf)
   })
-  // extract category_id from manual_url property since backend returns random values
+  // extract category_id from manual_url property since it contains unreliable data
   .transform((c) => {
     const exp = /\/c(\d+)\//
     const match = exp.exec(c.manual_url)
@@ -45,6 +47,8 @@ const Child = z
       category_id: extractedId ?? c.category_id
     }
   })
+  // replace top_category_id with placeholder since it contains unreliable data
+  .transform((c) => ({ ...c, top_category_id: 'NOT_RELIABLE_SEE_README' }))
 
 const Children = z.object({
   one: z.array(Child),
