@@ -103,5 +103,13 @@
   },
   "volta": {
     "node": "17.2.0"
+  },
+  "wallaby": {
+    "autoDetect": true,
+    "env": {
+      "params": {
+        "runner": "--experimental-vm-modules"
+      }
+    }
   }
 }
