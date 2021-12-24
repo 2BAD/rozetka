@@ -1,28 +1,50 @@
 import { z } from 'zod'
 
-const Leaf = z.object({
-  id: z.number(),
-  title: z.string(),
-  manual_url: z.string(),
-  category_id: z.number().nullable(),
-  top_category_id: z.number().nullable(),
-  on_subdomain: z.number(),
-  is_portal: z.boolean(),
-  outer_link: z.boolean()
-})
+const Leaf = z
+  .object({
+    id: z.number(),
+    title: z.string(),
+    manual_url: z.string(),
+    category_id: z.number().nullable(),
+    top_category_id: z.number().nullable(),
+    on_subdomain: z.number(),
+    is_portal: z.boolean(),
+    outer_link: z.boolean()
+  })
+  // extract category_id from manual_url property since backend returns random values
+  .transform((c) => {
+    const exp = /\/c(\d+)\//
+    const match = exp.exec(c.manual_url)
+    const extractedId = match !== null && match.length > 0 ? Number(match[1]) : null
+    return {
+      ...c,
+      category_id: extractedId ?? c.category_id
+    }
+  })
 
-const Child = z.object({
-  id: z.number(),
-  title: z.string(),
-  parent_id: z.number(),
-  column_number: z.string(),
-  manual_url: z.string(),
-  category_id: z.number().nullable(),
-  top_category_id: z.number().nullable(),
-  on_subdomain: z.number(),
-  is_portal: z.boolean(),
-  children: z.array(Leaf)
-})
+const Child = z
+  .object({
+    id: z.number(),
+    title: z.string(),
+    parent_id: z.number(),
+    column_number: z.string(),
+    manual_url: z.string(),
+    category_id: z.number().nullable(),
+    top_category_id: z.number().nullable(),
+    on_subdomain: z.number(),
+    is_portal: z.boolean(),
+    children: z.array(Leaf)
+  })
+  // extract category_id from manual_url property since backend returns random values
+  .transform((c) => {
+    const exp = /\/c(\d+)\//
+    const match = exp.exec(c.manual_url)
+    const extractedId = match !== null && match.length > 0 ? Number(match[1]) : null
+    return {
+      ...c,
+      category_id: extractedId ?? c.category_id
+    }
+  })
 
 const Children = z.object({
   one: z.array(Child),
