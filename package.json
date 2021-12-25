@@ -34,10 +34,7 @@
     "prepublishOnly": "run-s clean build",
     "test": "jest --coverage",
     "test:integration": "jest integration --coverage",
-    "test:integration:watch": "jest integration --watch",
     "test:unit": "jest unit --coverage",
-    "test:unit:watch": "jest unit --watch",
-    "test:watch": "jest --watch",
     "preversion": "run-s clean lint test build"
   },
   "prettier": {
