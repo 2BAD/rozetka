@@ -21,6 +21,6 @@ describe('catalog', () => {
   it('ids should match snapshot', async () => {
     expect.assertions(1)
     const ids = await catalog.ids(CATEGORY_ID)
-    expect(ids).toMatchSnapshot()
+    expect(ids.sort((a, b) => a - b)).toMatchSnapshot()
   }, 20000)
 })
