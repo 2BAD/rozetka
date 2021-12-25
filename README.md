@@ -4,6 +4,7 @@ Node.js client for unpublished Rozetka API
 
 [![NPM Version](https://img.shields.io/npm/v/@2bad/rozetka)](https://www.npmjs.com/package/@2bad/rozetka)
 [![GitHub Build Status](https://github.com/2bad/rozetka/workflows/build/badge.svg)](https://github.com/2BAD/rozetka/actions)
+[![Code coverage](https://img.shields.io/codecov/c/github/2BAD/rozetka)](https://codecov.io/gh/2BAD/rozetka)
 [![License](https://img.shields.io/npm/l/@2bad/rozetka)](https://www.npmjs.com/package/@2bad/rozetka)
 [![Written in TypeScript](https://img.shields.io/github/languages/top/2BAD/rozetka)](https://github.com/2BAD/rozetka/search?l=typescript)
 
