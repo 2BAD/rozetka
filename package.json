@@ -1,7 +1,7 @@
 {
   "name": "@2bad/rozetka",
   "version": "1.0.0",
-  "description": "Unofficial REST API client for rozetka.ua",
+  "description": "Unofficial REST API client for rozetka.com.ua",
   "keywords": [],
   "homepage": "https://github.com/2BAD/rozetka#readme",
   "bugs": {
