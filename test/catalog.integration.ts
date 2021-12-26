@@ -6,7 +6,7 @@ describe('catalog', () => {
   it('categories should match snapshot', async () => {
     expect.assertions(1)
     const categories = await catalog.categories()
-    expect(categories).toMatchSnapshot()
+    expect(Object.keys(categories)).toMatchSnapshot()
   })
   it('children should match snapshot', async () => {
     expect.assertions(1)
