@@ -1,4 +1,4 @@
-import * as catalog from '../source/catalog'
+import { catalog } from '../source/index'
 
 describe('catalog', () => {
   const CATEGORY_ID = 4649166
