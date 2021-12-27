@@ -139,7 +139,7 @@ const Detail = z.object({
   preorder: z.number(),
   comments_amount: z.number(),
   comments_mark: z.number(),
-  gift: Gift.nullable(),
+  gift: z.union([Gift, z.boolean()]).nullable(),
   tag: Tag.nullable(),
   pictograms: z.array(Pictogram).nullable(),
   // @todo requires verification
