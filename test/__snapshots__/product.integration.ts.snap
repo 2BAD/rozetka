@@ -1,5 +1,145 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`product characteristics should match snapshot 1`] = `
+Array [
+  Object {
+    "groupTitle": "",
+    "group_id": 0,
+    "group_order": 99999999,
+    "options": Array [
+      Object {
+        "category_id": 4626923,
+        "comparable": "main",
+        "id": 147152,
+        "in_short": 0,
+        "name": "upakovka147152",
+        "order": 3,
+        "status": "active",
+        "title": "Упаковка",
+        "type": "List",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/upakovka147152=plastikovaya/",
+            "title": "Пластиковая бутылка",
+          },
+        ],
+      },
+      Object {
+        "category_id": 4625018,
+        "comparable": "main",
+        "id": 168958,
+        "in_short": 0,
+        "name": "stepen-gazirovaniya",
+        "order": 21,
+        "status": "active",
+        "title": "Степень газирования",
+        "type": "ComboBox",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/stepen-gazirovaniya=bez-gaza/",
+            "title": "Без газа",
+          },
+        ],
+      },
+      Object {
+        "category_id": 4633001,
+        "comparable": "main",
+        "id": 71581,
+        "in_short": 0,
+        "name": "objom-71581",
+        "order": 24,
+        "status": "active",
+        "title": "Объем",
+        "type": "ComboBox",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/objom-71581=0-5-0-99-l/",
+            "title": "0.5 л",
+          },
+        ],
+      },
+      Object {
+        "category_id": 4639872,
+        "comparable": "main",
+        "id": 168950,
+        "in_short": 0,
+        "name": "tip168950",
+        "order": 27,
+        "status": "active",
+        "title": "Тип",
+        "type": "List",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/tip168950=mineralnaya/",
+            "title": "Минеральная",
+          },
+        ],
+      },
+      Object {
+        "category_id": 0,
+        "comparable": "main",
+        "id": 98900,
+        "in_short": 0,
+        "name": "strana-proizvoditelj-tovara-90098",
+        "order": 50,
+        "status": "active",
+        "title": "Страна-производитель",
+        "type": "ListValues",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/strana-proizvoditelj-tovara-90098=619938/",
+            "title": "Франция",
+          },
+        ],
+      },
+      Object {
+        "category_id": 0,
+        "comparable": "main",
+        "id": 92802,
+        "in_short": 0,
+        "name": "kolichestvo-predmetov-92802",
+        "order": 60,
+        "status": "active",
+        "title": "Количество в упаковке, шт",
+        "type": "ComboBox",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/kolichestvo-predmetov-92802=475541/",
+            "title": "6",
+          },
+        ],
+      },
+      Object {
+        "category_id": 4624997,
+        "comparable": "disable",
+        "id": 71434,
+        "in_short": 0,
+        "name": "srok-godnosti-71434",
+        "order": 65,
+        "status": "active",
+        "title": "Срок хранения",
+        "type": "TextInput",
+        "values": Array [
+          Object {
+            "href": null,
+            "title": "2 года",
+          },
+        ],
+      },
+    ],
+  },
+]
+`;
+
+exports[`product description should match snapshot 1`] = `
+Object {
+  "html": null,
+  "isRichNoLimit": false,
+  "rich": null,
+  "text": "<p> <p><b>Evian</b> – это cамая известная в мире минеральная вода. Она добывается на северном склоне французских Альп, в районе далеком от городов и промышленного производства. </p><p>В течение своего долгого 15-летнего пути <b>Evian</b> проходит природный фильтр из горных пород, обогащаясь естественными минеральными веществами. Благодаря этому, <b>Evian</b> приобретает кристальную чистоту и естественный уникально сбалансированный минеральный состав.</p><p><b><i>В упаковке 24 бутылки!</i></b></p>",
+}
+`;
+
 exports[`product details should match snapshot 1`] = `
 Array [
   Object {
@@ -29,8 +169,8 @@ Array [
     },
     "discount": 19,
     "dispatch": 1,
-    "docket": null,
-    "gift": null,
+    "docket": Array [],
+    "gift": false,
     "group_id": 0,
     "group_name": null,
     "group_title": null,
@@ -89,6 +229,104 @@ Array [
     "title_mode": null,
     "title_suffix": "",
     "use_group_links": null,
+  },
+]
+`;
+
+exports[`product multiple prices should match snapshot 1`] = `
+Array [
+  Object {
+    "has_shops": false,
+    "info": null,
+    "max_price": 0,
+    "min_price": 0,
+    "old_price": Any<Number>,
+    "old_price_formatted": Any<String>,
+    "old_usd_price": Any<String>,
+    "pl_charge_pcs": 0,
+    "pl_premium_bonus_charge_pcs": Any<Number>,
+    "pl_use_instant_bonus": false,
+    "price": Any<Number>,
+    "price_formatted": Any<String>,
+    "rests": -1,
+    "sell_status": "available",
+    "show_in_site": null,
+    "status": "active",
+    "usd_price": Any<String>,
+  },
+  Object {
+    "has_shops": false,
+    "info": null,
+    "max_price": 0,
+    "min_price": 0,
+    "old_price": Any<Number>,
+    "old_price_formatted": Any<String>,
+    "old_usd_price": Any<String>,
+    "pl_charge_pcs": 0,
+    "pl_premium_bonus_charge_pcs": Any<Number>,
+    "pl_use_instant_bonus": false,
+    "price": Any<Number>,
+    "price_formatted": Any<String>,
+    "rests": -1,
+    "sell_status": "available",
+    "show_in_site": null,
+    "status": "active",
+    "usd_price": Any<String>,
+  },
+]
+`;
+
+exports[`product price should match snapshot 1`] = `
+Array [
+  Object {
+    "has_shops": false,
+    "info": null,
+    "max_price": 0,
+    "min_price": 0,
+    "old_price": 241,
+    "old_price_formatted": "241",
+    "old_usd_price": "8.80",
+    "pl_charge_pcs": 0,
+    "pl_premium_bonus_charge_pcs": 1,
+    "pl_use_instant_bonus": false,
+    "price": 195,
+    "price_formatted": "195",
+    "rests": -1,
+    "sell_status": "available",
+    "show_in_site": null,
+    "status": "active",
+    "usd_price": "7.12",
+  },
+]
+`;
+
+exports[`product tags should match snapshot 1`] = `
+Array [
+  Object {
+    "announce": null,
+    "has_description": 1,
+    "icon": "https://content.rozetka.com.ua/goods_tags/images/original/243993948.jpg",
+    "icon_mobile": "",
+    "id": 30973,
+    "is_special_tag": 1,
+    "order": 50,
+    "show_in_catalog": 0,
+    "show_in_details": 1,
+    "title": "Новогодний выбор",
+    "view_position": 1,
+  },
+  Object {
+    "announce": null,
+    "has_description": 1,
+    "icon": "https://content2.rozetka.com.ua/goods_tags/images/original/244870163.png",
+    "icon_mobile": "",
+    "id": 31024,
+    "is_special_tag": 1,
+    "order": 45,
+    "show_in_catalog": 1,
+    "show_in_details": 1,
+    "title": "5% на бонусный счет",
+    "view_position": 2,
   },
 ]
 `;
