@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+
+jobs:
+  test:
+    name: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: volta-cli/action@v1
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
