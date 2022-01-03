@@ -284,32 +284,17 @@ Array [
 `;
 
 exports[`product tags should match snapshot 1`] = `
-Array [
-  Object {
-    "announce": null,
-    "has_description": 1,
-    "icon": Any<String>,
-    "icon_mobile": "",
-    "id": Any<Number>,
-    "is_special_tag": 1,
-    "order": Any<Number>,
-    "show_in_catalog": Any<Number>,
-    "show_in_details": 1,
-    "title": Any<String>,
-    "view_position": 1,
-  },
-  Object {
-    "announce": null,
-    "has_description": 1,
-    "icon": Any<String>,
-    "icon_mobile": "",
-    "id": Any<Number>,
-    "is_special_tag": 1,
-    "order": Any<Number>,
-    "show_in_catalog": Any<Number>,
-    "show_in_details": 1,
-    "title": Any<String>,
-    "view_position": 2,
-  },
-]
+Object {
+  "announce": null,
+  "has_description": 1,
+  "icon": Any<String>,
+  "icon_mobile": "",
+  "id": Any<Number>,
+  "is_special_tag": 1,
+  "order": Any<Number>,
+  "show_in_catalog": Any<Number>,
+  "show_in_details": 1,
+  "title": Any<String>,
+  "view_position": 1,
+}
 `;

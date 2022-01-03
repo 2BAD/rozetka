@@ -36,7 +36,7 @@ describe('product', () => {
       title: expect.any(String)
     }
     const tags = await product.tags(PRODUCT_ID)
-    expect(tags).toMatchSnapshot(new Array(2).fill(matcher))
+    expect(tags[0]).toMatchSnapshot(matcher)
   })
   it('price should match snapshot', async () => {
     expect.assertions(1)
