@@ -2,15 +2,20 @@ import got from 'got'
 import { logRequest, logResponse } from './hooks/debug'
 import { unwrapResponse } from './hooks/response'
 import { updateSearchParams } from './hooks/searchParams'
+import { Logger } from './../logger'
+
+const logger = Logger.child({
+  namespace: 'client'
+})
 
 export const rozetka = got.extend({
   headers: {
     'user-agent': '2bad/rozetka'
   },
   hooks: {
-    beforeRequest: [logRequest, updateSearchParams],
+    beforeRequest: [logRequest(logger), updateSearchParams],
     // @todo should handle response payload from common api separately since it doesn't follow the convention
-    afterResponse: [logResponse, unwrapResponse]
+    afterResponse: [logResponse(logger), unwrapResponse]
   },
   resolveBodyOnly: true,
   responseType: 'json',
