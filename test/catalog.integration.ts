@@ -2,6 +2,7 @@ import { catalog } from '../source/index'
 
 describe('catalog', () => {
   const CATEGORY_ID = 4649166
+  const CATEGORY_ID_WITH_CHILDREN = 4625018
 
   it('categories should match snapshot', async () => {
     expect.assertions(1)
@@ -11,7 +12,7 @@ describe('catalog', () => {
 
   it('children should match snapshot', async () => {
     expect.assertions(1)
-    const children = await catalog.children(CATEGORY_ID)
+    const children = await catalog.children(CATEGORY_ID_WITH_CHILDREN)
     expect(children).toMatchSnapshot()
   })
 
