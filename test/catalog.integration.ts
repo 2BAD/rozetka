@@ -1,18 +1,15 @@
 import { catalog } from '../source/index'
 
+jest.setTimeout(20000)
+
 describe('catalog', () => {
   const CATEGORY_ID = 4649166
-  const INCREASED_TIMEOUT_TO_20S = 20000
 
-  it(
-    'categories should match snapshot',
-    async () => {
-      expect.assertions(1)
-      const categories = await catalog.categories()
-      expect(Object.keys(categories)).toMatchSnapshot()
-    },
-    INCREASED_TIMEOUT_TO_20S
-  )
+  it('categories should match snapshot', async () => {
+    expect.assertions(1)
+    const categories = await catalog.categories()
+    expect(Object.keys(categories)).toMatchSnapshot()
+  })
 
   it('children should match snapshot', async () => {
     expect.assertions(1)
@@ -26,13 +23,9 @@ describe('catalog', () => {
     expect(details).toMatchSnapshot()
   })
 
-  it(
-    'ids should match snapshot',
-    async () => {
-      expect.assertions(1)
-      const ids = await catalog.ids(CATEGORY_ID)
-      expect(ids.sort((a, b) => a - b)).toMatchSnapshot()
-    },
-    INCREASED_TIMEOUT_TO_20S
-  )
+  it('ids should match snapshot', async () => {
+    expect.assertions(1)
+    const ids = await catalog.ids(CATEGORY_ID)
+    expect(ids.sort((a, b) => a - b)).toMatchSnapshot()
+  })
 })
