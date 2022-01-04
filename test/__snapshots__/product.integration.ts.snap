@@ -180,7 +180,7 @@ Array [
     },
     "discount": 19,
     "dispatch": 1,
-    "docket": Any<Array>,
+    "docket": toBeOneOf<Any,>,
     "gift": toBeOneOf<true,false,>,
     "group_id": 0,
     "group_name": null,
