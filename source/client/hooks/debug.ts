@@ -21,16 +21,12 @@ export const logRequest = (options: Options): void => {
 export const logResponse = (response: Response): Response => {
   const { url, headers, statusCode } = response
 
-  try {
-    const context = {
-      url,
-      headers: JSON.stringify(headers),
-      statusCode
-    }
-    log.debug(context, 'response info')
-  } catch (error) {
-    log.error('unable to parse response headers')
+  const context = {
+    url,
+    headers: JSON.stringify(headers),
+    statusCode
   }
+  log.debug(context, 'response info')
 
   return response
 }
