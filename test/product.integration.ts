@@ -6,6 +6,7 @@ import { product } from '../source/index'
 describe('product', () => {
   const PRODUCT_ID = 6802844
   const PRODUCT_IDS_ARRAY = [6802844, 9906369]
+  const PRODUCT_ID_WITH_TAGS = 318463618
   const WRONG_PRODUCT_ID = 999999999
 
   it('details should match snapshot', async () => {
@@ -58,7 +59,7 @@ describe('product', () => {
       show_in_catalog: expect.any(Number),
       title: expect.any(String)
     }
-    const tags = await product.tags(PRODUCT_ID)
+    const tags = await product.tags(PRODUCT_ID_WITH_TAGS)
     expect(tags[0]).toMatchSnapshot(matcher)
   })
 

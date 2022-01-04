@@ -301,11 +301,11 @@ Object {
   "icon": Any<String>,
   "icon_mobile": "",
   "id": Any<Number>,
-  "is_special_tag": 1,
+  "is_special_tag": 0,
   "order": Any<Number>,
   "show_in_catalog": Any<Number>,
   "show_in_details": 1,
   "title": Any<String>,
-  "view_position": 1,
+  "view_position": null,
 }
 `;
