@@ -3,8 +3,6 @@
 import 'jest-extended'
 import { product } from '../source/index'
 
-jest.setTimeout(20000)
-
 describe('product', () => {
   const PRODUCT_ID = 6802844
   const PRODUCT_IDS_ARRAY = [6802844, 9906369]

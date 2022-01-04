@@ -69,7 +69,8 @@
     ],
     "testMatch": [
       "<rootDir>/test/**/*.ts?(x)"
-    ]
+    ],
+    "testTimeout": 30000
   },
   "dependencies": {
     "got": "12.0.0",

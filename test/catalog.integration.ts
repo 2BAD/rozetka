@@ -1,7 +1,5 @@
 import { catalog } from '../source/index'
 
-jest.setTimeout(20000)
-
 describe('catalog', () => {
   const CATEGORY_ID = 4649166
 
