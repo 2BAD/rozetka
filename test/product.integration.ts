@@ -83,4 +83,10 @@ describe('product', () => {
     const price = await product.price(PRODUCT_IDS_ARRAY)
     expect(price).toMatchSnapshot(new Array(2).fill(matcher))
   })
+
+  it('relatedProducts should match snapshot', async () => {
+    expect.assertions(1)
+    const related = await product.relatedProducts(PRODUCT_ID)
+    expect(related).toMatchSnapshot()
+  })
 })
