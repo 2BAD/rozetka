@@ -21,5 +21,4 @@ extends:
 rules:
   '@typescript-eslint/consistent-type-definitions': ['error', 'type']
   '@typescript-eslint/promise-function-async': 'off'
-  'import/no-default-export': 'warn'
   'jest/no-hooks': ['error', { 'allow': ['beforeAll', 'afterAll'] }]
