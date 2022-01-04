@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`product characteristics should be an empty array if wrong id is requested 1`] = `Array []`;
+
 exports[`product characteristics should match snapshot 1`] = `
 Array [
   Object {
@@ -129,6 +131,15 @@ Array [
     ],
   },
 ]
+`;
+
+exports[`product description of wrong id should match snapshot 1`] = `
+Object {
+  "html": null,
+  "isRichNoLimit": false,
+  "rich": null,
+  "text": null,
+}
 `;
 
 exports[`product description should match snapshot 1`] = `
