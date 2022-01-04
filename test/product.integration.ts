@@ -11,7 +11,7 @@ describe('product', () => {
   it('details should match snapshot', async () => {
     expect.assertions(1)
     const matcher = {
-      docket: expect.any(Array),
+      docket: expect.toBeOneOf([expect.any(Array), null]),
       gift: expect.toBeOneOf([true, false, null])
     }
     const details = await product.details(PRODUCT_ID)
