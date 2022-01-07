@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { catalog } from '../source/index'
 
 describe('catalog', () => {
@@ -12,8 +14,13 @@ describe('catalog', () => {
 
   it('children should match snapshot', async () => {
     expect.assertions(1)
+    const matcher = {
+      count: expect.any(Number),
+      goods_count: expect.any(Number),
+      goods_id: expect.any(Number)
+    }
     const children = await catalog.children(CATEGORY_ID_WITH_CHILDREN)
-    expect(children).toMatchSnapshot()
+    expect(children.children).toMatchSnapshot(new Array(children.children.length).fill(matcher))
   })
 
   it('details should match snapshot', async () => {
