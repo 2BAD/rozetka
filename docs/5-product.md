@@ -4,9 +4,9 @@
 
 ### Details
 
-### <code>details(productId: number)</code>
+<code>details(productId: number)</code>
 
-**Returns: <code>Promise<[Price](../source/type/product/Details.ts)>**</code>
+Returns: <code>Promise<[Details](../source/type/product/Details.ts)></code>
 
 <details>
   <summary>Response sample</summary>
@@ -87,9 +87,9 @@
 
 ### Descriptions
 
-### <code>descriptions(productId: number)</code>
+<code>descriptions(productId: number)</code>
 
-**Returns: <code>Promise<[Descriptions](../source/type/product/Descriptions.ts)>**</code>
+Returns: <code>Promise<[Descriptions](../source/type/product/Descriptions.ts)></code>
 
 <details>
   <summary>Response sample</summary>
@@ -107,9 +107,9 @@
 
 ### Characteristics
 
-### <code>characteristics(productId: number)</code>
+<code>characteristics(productId: number)</code>
 
-**Returns: <code>Promise<[Characteristics](../source/type/product/Characteristics.ts)>**</code>
+Returns: <code>Promise<[Characteristics](../source/type/product/Characteristics.ts)></code>
 
 <details>
   <summary>Response sample</summary>
@@ -249,9 +249,9 @@
 
 ### Tags
 
-### <code>tags(productId: number)</code>
+<code>tags(productId: number)</code>
 
-**Returns: <code>Promise<[Tags](../source/type/product/Tags.ts)>**</code>
+Returns: <code>Promise<[Tags](../source/type/product/Tags.ts)></code>
 
 <details>
   <summary>Response sample</summary>
@@ -330,15 +330,15 @@
 
 ### Promotion
 
-### <code>promotion(productId: number)</code>
+<code>promotion(productId: number)</code>
 
-**Returns: <code>Promise<[Promotion](../source/type/product/Promotion.ts)>**</code>
+Returns: <code>Promise<[Promotion](../source/type/product/Promotion.ts)></code>
 
 ### Offer
 
-### <code>offer(productId: number)</code>
+<code>offer(productId: number)</code>
 
-**Returns: <code>Promise<[Offer](../source/type/product/Offer.ts)>**</code>
+Returns: <code>Promise<[Offer](../source/type/product/Offer.ts)></code>
 
 <details>
   <summary>Response sample</summary>
@@ -492,9 +492,9 @@
 
 ### Price
 
-### <code>price(productId: number)</code>
+<code>price(productId: number)</code>
 
-**Returns: <code>Promise<[Price](../source/type/product/Price.ts)>**</code>
+Returns: <code>Promise<[Price](../source/type/product/Price.ts)></code>
 
 <details>
   <summary>Response sample</summary>
@@ -525,6 +525,6 @@
 
 ### relatedProducts
 
-### <code>relatedProducts(productId: number)</code>
+<code>relatedProducts(productId: number)</code>
 
-**Returns: <code>Promise<[relatedProducts](../source/type/product/relatedProducts.ts)>**</code>
+Returns: <code>Promise<[relatedProducts](../source/type/product/relatedProducts.ts)></code>
