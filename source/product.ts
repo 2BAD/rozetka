@@ -49,6 +49,7 @@ export const promotion = (productId: number): Promise<Promotion> =>
     .get('v4/marketing/get-promotions', genericParams(productId))
     .then((r) => Promotion.parse(r))
 
+// @todo gracefully handle the exception when there is no offers (data is null)
 export const offers = (productId: number): Promise<Offer> =>
   product.get('v4/marketing/get-super-offer', genericParams(productId)).then((r) => Offer.parse(r))
 

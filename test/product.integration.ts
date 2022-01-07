@@ -84,7 +84,6 @@ describe('product', () => {
     expect(price).toMatchSnapshot(new Array(2).fill(matcher))
   })
 
-  it('relatedProducts should match snapshot', async () => {
   it('relatedProducts should return an array', async () => {
     expect.assertions(1)
     const related = await product.relatedProducts(PRODUCT_ID)
