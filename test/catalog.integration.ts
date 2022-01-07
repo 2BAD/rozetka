@@ -20,7 +20,9 @@ describe('catalog', () => {
       goods_id: expect.any(Number)
     }
     const children = await catalog.children(CATEGORY_ID_WITH_CHILDREN)
-    expect(children.children).toMatchSnapshot(new Array(children.children.length).fill(matcher))
+    expect(children.children).toMatchSnapshot(
+      Array.from({ length: children.children.length }).fill(matcher)
+    )
   })
 
   it('details should match snapshot', async () => {

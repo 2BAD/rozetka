@@ -81,7 +81,7 @@ describe('product', () => {
       usd_price: expect.any(String)
     }
     const price = await product.price(PRODUCT_IDS_ARRAY)
-    expect(price).toMatchSnapshot(new Array(2).fill(matcher))
+    expect(price).toMatchSnapshot(Array.from({ length: 2 }).fill(matcher))
   })
 
   it('relatedProducts should return an array', async () => {
