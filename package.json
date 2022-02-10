@@ -48,6 +48,9 @@
       "source/**/*.ts?(x)"
     ],
     "coverageDirectory": "coverage",
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
     "globals": {
       "ts-jest": {
         "useESM": true
@@ -57,8 +60,7 @@
       "^(\\.{1,2}/.*)\\.js$": "$1"
     },
     "modulePathIgnorePatterns": [
-      "<rootDir>/build/",
-      "<rootDir>/source/types/"
+      "<rootDir>/build/"
     ],
     "preset": "ts-jest/presets/default-esm",
     "setupFiles": [
@@ -68,7 +70,7 @@
       "jest-extended/all"
     ],
     "testMatch": [
-      "<rootDir>/test/**/*.ts?(x)"
+      "<rootDir>/source/**/test.*.ts?(x)"
     ],
     "testTimeout": 30000
   },
