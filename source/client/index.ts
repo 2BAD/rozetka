@@ -13,7 +13,7 @@ export const rozetka = got.extend({
     'user-agent': '2bad/rozetka'
   },
   hooks: {
-    beforeRequest: [logRequest(logger), updateSearchParams],
+    beforeRequest: [updateSearchParams, logRequest(logger)],
     // @todo should handle response payload from common api separately since it doesn't follow the convention
     afterResponse: [logResponse(logger), unwrapResponse]
   },
