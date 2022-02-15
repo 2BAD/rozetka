@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/products/characteristics GET When asked for an existing product 
+	 Then should be able to retrieve and parse its characteristics 1`] = `
+Array [
+  Object {
+    "groupTitle": "",
+    "group_id": 0,
+    "group_order": 99999999,
+    "options": Array [
+      Object {
+        "category_id": 4626923,
+        "comparable": "main",
+        "id": 147152,
+        "in_short": 0,
+        "name": "upakovka147152",
+        "order": 3,
+        "status": "active",
+        "title": "Упаковка",
+        "type": "List",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/upakovka147152=plastikovaya/",
+            "title": "Пластиковая бутылка",
+          },
+        ],
+      },
+      Object {
+        "category_id": 4625018,
+        "comparable": "main",
+        "id": 168958,
+        "in_short": 0,
+        "name": "stepen-gazirovaniya",
+        "order": 21,
+        "status": "active",
+        "title": "Степень газирования",
+        "type": "ComboBox",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/stepen-gazirovaniya=bez-gaza/",
+            "title": "Без газа",
+          },
+        ],
+      },
+      Object {
+        "category_id": 4633001,
+        "comparable": "main",
+        "id": 71581,
+        "in_short": 0,
+        "name": "objom-71581",
+        "order": 24,
+        "status": "active",
+        "title": "Объем",
+        "type": "ComboBox",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/objom-71581=0-5-0-99-l/",
+            "title": "0.5 л",
+          },
+        ],
+      },
+      Object {
+        "category_id": 4639872,
+        "comparable": "main",
+        "id": 168950,
+        "in_short": 0,
+        "name": "tip168950",
+        "order": 27,
+        "status": "active",
+        "title": "Тип",
+        "type": "List",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/tip168950=mineralnaya/",
+            "title": "Минеральная",
+          },
+        ],
+      },
+      Object {
+        "category_id": 0,
+        "comparable": "main",
+        "id": 98900,
+        "in_short": 0,
+        "name": "strana-proizvoditelj-tovara-90098",
+        "order": 50,
+        "status": "active",
+        "title": "Страна-производитель",
+        "type": "ListValues",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/strana-proizvoditelj-tovara-90098=619938/",
+            "title": "Франция",
+          },
+        ],
+      },
+      Object {
+        "category_id": 0,
+        "comparable": "main",
+        "id": 92802,
+        "in_short": 0,
+        "name": "kolichestvo-predmetov-92802",
+        "order": 60,
+        "status": "active",
+        "title": "Количество в упаковке, шт",
+        "type": "ComboBox",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/kolichestvo-predmetov-92802=475541/",
+            "title": "6",
+          },
+        ],
+      },
+      Object {
+        "category_id": 4624997,
+        "comparable": "disable",
+        "id": 71434,
+        "in_short": 0,
+        "name": "srok-godnosti-71434",
+        "order": 65,
+        "status": "active",
+        "title": "Срок хранения",
+        "type": "TextInput",
+        "values": Array [
+          Object {
+            "href": null,
+            "title": "2 года",
+          },
+        ],
+      },
+    ],
+  },
+]
+`;

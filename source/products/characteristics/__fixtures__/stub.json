@@ -1,0 +1,31 @@
+[
+    {
+        "scope": "https://product-api.rozetka.com.ua:443",
+        "method": "GET",
+        "path": "/v4/goods/get-characteristic?front-type=xl&country=UA&lang=ru&goodsId=6802844",
+        "body": "",
+        "status": 200,
+        "response": [
+            "1f8b08000000000000039d94dd6ed33014c75fa5ca7543933449934abd812b242e276e109adcc4745e9338729c6add340986f8104c9ab84508c4c7039441b56965ec15ec37e2e4832ed9da20da4a6d621ffbfcff3f9fe303c5471c29fd4707ca88d134de26bed2d7dae50b653e664adf2d3fe5f016e10156fa8ad25668cc098d927c7db652377bba65b4153e8db3880724e11015a1307b4b6334a693312a82609c971b89afe24accc485f82d4ee17706531ee27844d934d763da86ed1addb69270c453c8a6208f9309ce04140a618e44dbc90e653c97efd130460c0df3ed434422089da020c585d465e24f622166f2993c12e765fa993c6989eff2b93c926f61b250b3c3f01308ef4ca88f3a9e69775da76774ea7e067180124e60044d5147397c7cd82e99d88e6b394b26f76838a477e9de359784e31847ea08ed1306ab23324555389f41dd1c00cdc5a53c6e891f40ea4c9ccba7855c7109cf272b88599aee341033f40d91bd0321677f65ac87b3c2d46088f7b3811a1d40e7e80d70e87097866a1e5585f211cee80d28f975db79b7ab697a93737333e7da1dab25166b0d57840e34d55235d575d5e05621686b9a8393b898afbafc026579b5c26196b0c9616fc3b3fd00f92ec51c6a6b2616f2189e67796dad76bc943c084984190aa21b95ef3aae56f7fbb0485a297d8622a4c68c927dd89c701cecaa1cea852115d6bace8d46c895812a555ce50d700e35780aff3fa109b22e01d13771690da0b2d3d808d4b742887c5936dfba1ef887bb81adbb6ed7a931331ccd68e887310d88b783133ea1b031f6430c1baaf9aa2aabf7006501e25ec16966d71b406a89d3967c5ebb69e7ed967c2d8ffe0799bd21327b2da5064703b36759a65ebf2fccaeb9e4b385f7f8fd284e2b8d94303a5647d48f28dcc66a1e5e2fa2ac6e2e5af245594bf3b537a8e9babd26125613099f24f9d34a1846767f66557b7d7f466910804bf842cad4f370024b384bf1e11f4bf96ecfa3070000"
+        ],
+        "rawHeaders": [
+            "Server",
+            "nginx",
+            "Date",
+            "Tue, 15 Feb 2022 22:53:27 GMT",
+            "Content-Type",
+            "application/json; charset=UTF-8",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "close",
+            "domain",
+            "product-api",
+            "Content-Encoding",
+            "gzip",
+            "domain",
+            "product-api"
+        ],
+        "responseIsBinary": false
+    }
+]
