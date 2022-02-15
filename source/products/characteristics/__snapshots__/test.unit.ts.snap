@@ -131,3 +131,14 @@ Array [
   },
 ]
 `;
+
+exports[`/products/characteristics GET When asked for an non-existing product 
+	 Then should return an Error object 1`] = `
+[ZodError: [
+  {
+    "code": "custom",
+    "message": "Bad response. The item you requested is not available.",
+    "path": []
+  }
+]]
+`;
