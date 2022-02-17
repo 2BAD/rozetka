@@ -1,17 +1,17 @@
 import { URL } from 'url'
 import nock, { Definition } from 'nock'
 
-type Mock = Promise<{
+type Mock = {
   done: () => void
   context: nock.BackContext
-}>
+}
 
 /**
  * Mock server with fixture recording and playback support
  * @param url context specific module url
  * @param file file name for stub object
  */
-export const server = (url: string, file: string): Mock => {
+export const server = (url: string, file: string): Promise<Mock> => {
   nock.back.fixtures = new URL('./__fixtures__/', url).pathname
 
   return nock
@@ -20,8 +20,11 @@ export const server = (url: string, file: string): Mock => {
       afterRecord
     })
     .then(({ nockDone, context }) => ({
-      // just for aesthetical reasons
-      done: nockDone,
+      done: () => {
+        // restore the HTTP interceptor to the normal unmocked behaviour
+        nock.restore()
+        nockDone()
+      },
       context
     }))
 }
