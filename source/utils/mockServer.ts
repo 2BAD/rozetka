@@ -26,8 +26,11 @@ export const server = (url: string, file: string): Mock => {
     }))
 }
 
+/**
+ * Match end replace any occurrences of `r=*` in query string
+ */
 const stripTimestamp = (path: string): string => {
-  return path.replace(/(&r=[0,1]\.\d+)|(r=[0,1]\.\d+&)/g, '')
+  return path.replace(/(?<=\?|&)r=[^&]*/g, '')
 }
 
 const before = (scope: Definition): void => {
