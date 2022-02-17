@@ -32,7 +32,7 @@ const stripTimestamp = (path: string): string => {
 
 const before = (scope: Definition): void => {
   // @ts-expect-error it does exist
-  scope.filteringPath = () => stripTimestamp(scope.path)
+  scope.filteringPath = stripTimestamp
 }
 
 const afterRecord = (fixtures: Definition[]): Definition[] =>

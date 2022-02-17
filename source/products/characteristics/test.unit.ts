@@ -1,4 +1,4 @@
-import { server } from '../../utils/server'
+import { server } from '../../utils/mockServer'
 import { PRODUCT_ID, WRONG_PRODUCT_ID } from '../fixtures'
 import { get } from './index'
 
