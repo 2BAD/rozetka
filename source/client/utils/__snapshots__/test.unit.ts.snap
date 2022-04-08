@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`parameter builder should accept an array of arrays 1`] = `
+exports[`parameter builder should accept an object with records 1`] = `
 Object {
   "searchParams": URLSearchParams {
     Symbol(query): Array [
