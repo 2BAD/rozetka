@@ -79,23 +79,6 @@ Array [
       Object {
         "category_id": 0,
         "comparable": "main",
-        "id": 98900,
-        "in_short": 0,
-        "name": "strana-proizvoditelj-tovara-90098",
-        "order": 50,
-        "status": "active",
-        "title": "Страна-производитель",
-        "type": "ListValues",
-        "values": Array [
-          Object {
-            "href": "/voda/c4639872/strana-proizvoditelj-tovara-90098=619938/",
-            "title": "Франция",
-          },
-        ],
-      },
-      Object {
-        "category_id": 0,
-        "comparable": "main",
         "id": 92802,
         "in_short": 0,
         "name": "kolichestvo-predmetov-92802",
@@ -124,6 +107,23 @@ Array [
           Object {
             "href": null,
             "title": "2 года",
+          },
+        ],
+      },
+      Object {
+        "category_id": 0,
+        "comparable": "main",
+        "id": 98900,
+        "in_short": 0,
+        "name": "strana-proizvoditelj-tovara-90098",
+        "order": 951,
+        "status": "active",
+        "title": "Страна производитель",
+        "type": "ListValues",
+        "values": Array [
+          Object {
+            "href": "/voda/c4639872/strana-proizvoditelj-tovara-90098=619938/",
+            "title": "Франция",
           },
         ],
       },
