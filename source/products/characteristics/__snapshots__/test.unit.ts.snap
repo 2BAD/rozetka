@@ -137,7 +137,7 @@ exports[`/products/characteristics GET When asked for an non-existing product
 [ZodError: [
   {
     "code": "custom",
-    "message": "Bad response. The item you requested is not available.",
+    "message": "Bad response. The item you have requested is not available.",
     "path": []
   }
 ]]
