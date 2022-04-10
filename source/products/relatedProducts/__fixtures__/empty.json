@@ -1,0 +1,31 @@
+[
+    {
+        "scope": "https://product-api.rozetka.com.ua:443",
+        "method": "GET",
+        "path": "/v4/goods/get-related?front-type=xl&country=UA&lang=ru&goodsId=999999999&",
+        "body": "",
+        "status": 200,
+        "response": [
+            "1f8b0800000000000003ab564a492c4954b28a8ed5512a2e4d4e4e2d2e56b22a292a4dad0500f880ffb91a000000"
+        ],
+        "rawHeaders": [
+            "Server",
+            "nginx",
+            "Date",
+            "Sun, 10 Apr 2022 02:31:22 GMT",
+            "Content-Type",
+            "application/json; charset=UTF-8",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "close",
+            "domain",
+            "product-api",
+            "Content-Encoding",
+            "gzip",
+            "domain",
+            "product-api"
+        ],
+        "responseIsBinary": false
+    }
+]
