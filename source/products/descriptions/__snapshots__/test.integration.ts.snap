@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/products/descriptions GET When asked for an existing product 
+	 Then should be able to retrieve and parse its description 1`] = `
+Object {
+  "html": null,
+  "isRichNoLimit": false,
+  "rich": null,
+  "text": "<p> <p><b>Evian</b> – это cамая известная в мире минеральная вода. Она добывается на северном склоне французских Альп, в районе далеком от городов и промышленного производства. </p><p>В течение своего долгого 15-летнего пути <b>Evian</b> проходит природный фильтр из горных пород, обогащаясь естественными минеральными веществами. Благодаря этому, <b>Evian</b> приобретает кристальную чистоту и естественный уникально сбалансированный минеральный состав.</p><p><b><i>В упаковке 24 бутылки!</i></b></p>",
+}
+`;
+
+exports[`/products/descriptions GET When asked for an non-existing product 
+	 Then should return an Error object 1`] = `
+[ZodError: [
+  {
+    "code": "custom",
+    "message": "Bad response. The item you have requested is not available.",
+    "path": []
+  }
+]]
+`;

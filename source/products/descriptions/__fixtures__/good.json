@@ -1,0 +1,31 @@
+[
+    {
+        "scope": "https://product-api.rozetka.com.ua:443",
+        "method": "GET",
+        "path": "/v4/goods/get-goods-description?front-type=xl&country=UA&lang=ru&goodsId=6802844&",
+        "body": "",
+        "status": 200,
+        "response": [
+            "1f8b08000000000000036d53cb6ed35010fd95e1ae4d23106c22cb3b7688057f9086a05a4a4b553b08a9aa64c714a85ade7bbec135b57af3727e61e617f812ce8ced48882c92dc79cf396772ee5e8dd2911b9ebb74f22e7543179e46844f78183d7b1b8f4ec2c161447fb29f249f65ce0d8db9e43597f295d8f33d575c4b8ec0a6755584a0978c6b7bc05dc328792537bb146ef88ecb03e25fea22180ddfca350225b2e768872c8d48ceb50dc86036bc56c7925778a22dc97bebbc910f52f0bd85bc5c127fb361db4097b18c4557a053515d23519b712373e2dff8c96ca34697f7c45bb3d7722d9f2c7b63c391d7875ad82831e09542090720ec34e21f044f2d1fadcceb92b9a5d66dbd0e59e9d3cc474f1fea0023afee0714303dfd437e3b562e6d4baf4babc3776b6fc0dc0264601c7083becc84e99121aca46c7b98a0056cdb06a55ca9224071439d8a7507c950a3f15a09f94fc73ea0d25ced6af42c3c54fd0e50a58104df9241ccf672406911ec41e64dfecc88b003205e1abedc1cedc442be10686d9d104e0ad36affd6a0a330fe97bbcb6b54895bd35f4f26efe8d3adfb9abd38175ad774ab54079dce0011c6a67601664b3ba80adf353d7e4200031151bbd28b7c100ee248c16aa90bdc517a3c75c393d9741ab83879198f8f5ebc791e1fc7f8e7bd1e4d9349e0cee06b332e0297ccc6e34992b8617a369b5cfc05ec27ff2fac030000"
+        ],
+        "rawHeaders": [
+            "Server",
+            "nginx",
+            "Date",
+            "Sun, 10 Apr 2022 02:03:24 GMT",
+            "Content-Type",
+            "application/json; charset=UTF-8",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "close",
+            "domain",
+            "product-api",
+            "Content-Encoding",
+            "gzip",
+            "domain",
+            "product-api"
+        ],
+        "responseIsBinary": false
+    }
+]
